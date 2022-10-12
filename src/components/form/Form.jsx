@@ -31,7 +31,7 @@ const Form = () => {
   };
 
   return (
-    <div>
+    <div className="add-form">
       <div className="input-group">
         <label className="input-Text">제목</label>
         <input

@@ -41,11 +41,11 @@ const initialState = {
 
 const todolist = (state = initialState, action) => {
   // console.log(action);
-  console.log(state);
+  // console.log(state);
   switch (action.type) {
     case INPUT_TEXT:
       state.user.push(action.payload);
-      console.log("---", { ...state, user: [...state.user] });
+      // console.log("---", { ...state, user: [...state.user] });
       return { ...state, user: [...state.user] };
 
     //완료 취소 기능
@@ -69,7 +69,6 @@ const todolist = (state = initialState, action) => {
       return { ...state, user: [...state.user] };
 
     default:
-      console.log("+++", state);
       return state;
   }
 };

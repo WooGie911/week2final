@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Counter from "../pages/Counter";
-import MyPage from "../pages/MyPage";
+import DetailPage from "../pages/DetailPage";
 import TodoList from "../pages/TodoList";
 
 const Router = () => {
@@ -16,7 +16,7 @@ const Router = () => {
 						element는 해당 주소로 이동했을 때 보여주고자 하는 컴포넌트를 넣어줍니다.
 				 */}
         <Route path="/" element={<TodoList />} />
-        <Route path="mypage/:id" element={<MyPage />} />
+        <Route path="detailpage/:id" element={<DetailPage />} />
       </Routes>
     </BrowserRouter>
   );
