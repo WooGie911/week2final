@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { userRevise, deleteData } from "../../redux/modules/todolist";
 import "./style.css";
+import { Link, useParams } from "react-router-dom";
 
 const List = () => {
   const dispatch = useDispatch();
@@ -26,9 +27,9 @@ const List = () => {
           if (!todo1.isDone) {
             return (
               <div key={index} className="todo-container">
-                <a className="goMypage" href={`mypage/${todo1.id}`}>
+                <Link className="goMypage" to={`mypage/${todo1.id}`}>
                   상세보기
-                </a>
+                </Link>
                 <div>
                   <h2 className="todo-title">{todo1.title}</h2>
                   <div>{todo1.body}</div>
@@ -62,9 +63,9 @@ const List = () => {
             return (
               <div key={index} className="todo-container">
                 <div>
-                  <a className="goMypage" href={`mypage/${todo1.id}`}>
+                  <Link className="goMypage" to={`mypage/${todo1.id}`}>
                     상세보기
-                  </a>
+                  </Link>
                   <h2 className="todo-title">{todo1.title}</h2>
                   <div>{todo1.body}</div>
                 </div>
