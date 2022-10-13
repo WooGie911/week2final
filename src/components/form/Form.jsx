@@ -10,8 +10,10 @@ const Form = () => {
     body: "",
     isDone: false,
   };
+  //id 0부터1사이 랜덤숫자로 받기위해 변수 생성
   const getRandom = () => Math.random();
   const inputId = getRandom();
+
   const [input, setInput] = useState(initialState);
   const dispatch = useDispatch();
 
