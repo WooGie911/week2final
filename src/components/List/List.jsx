@@ -59,7 +59,7 @@ const List = () => {
       <div className="list-wrapper">
         {todoList.map((todo1, index) => {
           if (todo1.isDone) {
-            // console.log(todo1);
+            console.log(todo1);
             return (
               <div key={index} className="todo-container">
                 <div>
